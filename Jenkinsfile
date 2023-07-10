@@ -34,7 +34,7 @@ pipeline
             {
                 steps{
                     dir("Jenkins_stuff/build"){
-                        sh "runTests"
+                        sh "./runTests"
                     }
                 }
             }
