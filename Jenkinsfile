@@ -25,7 +25,7 @@ pipeline
             {
                 steps{
                     dir("Jenkins_stuff/build"){
-                        sh "cmake.."
+                        sh "/usr/bin/cmake.."
                         sh "make"
                     }
                 }
