@@ -39,5 +39,12 @@ pipeline
                 }
             }
         }
+    post {
+    always {
+      testNG(showFailedBuilds: true,
+             unstableFails: 5, unstableSkips: 25,
+             failedFails:  10, failedSkips:   50)
+    }
+  }
     
 }
