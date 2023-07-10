@@ -2,7 +2,7 @@ pipeline
 {
     agent any 
     environment {
-    PATH = "/opt/maven/bin:${env.PATH}"
+    PATH = "/opt/maven/bin:/usr/bin/cmake/:${env.PATH}"
   }
         stages{
             
