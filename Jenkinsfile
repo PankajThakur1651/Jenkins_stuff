@@ -36,6 +36,8 @@ pipeline
                 steps{
                     dir("Jenkins_stuff/build"){
                         sh "./runTests --gtest_output=xml:testng-results.xml"
+                        echo "print xml contents now "
+                        sh "cat testng-results.xml"
                     }
                 }
             }
