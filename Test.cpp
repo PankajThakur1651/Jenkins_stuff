@@ -3,6 +3,11 @@
 TEST(SquareRootTest, NegativeNos) {
     ASSERT_EQ(1, 1);
 }
+
+TEST(SquareRootTest, PositiveNos) {
+    ASSERT_EQ(1, 0);
+}
+ 
  
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
