@@ -38,11 +38,12 @@ pipeline
                     }
                 }
             }
-             post {
+         
+        }
+            post {
                 always {
                 testNG(reportFilenamePattern: '**/testing-results.xml')
             }
-        }
         }
 }
 
