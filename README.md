@@ -8,3 +8,10 @@ install cmake, g++ and other required tool
 
 docker start jenkins_machine
 docker stop jenkins_machine
+
+
+
+http://localhost:8080/pipeline-syntax/globals
+
+http://localhost:8080/cli/
+
