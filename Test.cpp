@@ -5,7 +5,7 @@ TEST(SquareRootTest, NegativeNos) {
 }
 
 TEST(SquareRootTest, PositiveNos) {
-    ASSERT_EQ(1, 1);
+    ASSERT_EQ(1, -1);
 }
  
  
