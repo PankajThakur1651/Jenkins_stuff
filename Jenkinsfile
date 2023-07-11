@@ -34,8 +34,13 @@ pipeline
             {
                 steps{
                     dir("Jenkins_stuff/build"){
-                        sh "./runTests"
+                        sh "./runTests --gtest_output=xml:testing-results.xml"
                     }
+                }
+            }
+             post {
+                always {
+                testNG()
                 }
             }
         }
