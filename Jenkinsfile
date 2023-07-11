@@ -34,17 +34,15 @@ pipeline
             {
                 steps{
                     dir("Jenkins_stuff/build"){
-                        sh "./runTests --gtest_output=xml:testng-results.xml"
+                        sh "./runTests --gtest_output=xml:testing-results.xml"
                     }
                 }
             }
              post {
-    always {
-      testNG(showFailedBuilds: true,
-             unstableFails: 5, unstableSkips: 25,
-             failedFails:  10, failedSkips:   50)
-    }
-  }
+                always {
+                testNG(reportFilenamePattern: '**/testing-results.xml')
+            }
+        }
         }
 }
 
