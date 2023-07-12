@@ -35,17 +35,17 @@ pipeline
             {
                 steps{
                     dir("Jenkins_stuff/build"){
-                        sh "./runTests --gtest_output=xml:testng-results.xml"
+                        sh "./runTests --gtest_output=xml:testing-results.xml"
                         echo "print xml contents now "
-                        sh "cat testng-results.xml"
+                        sh "cat testing-results.xml"
                     }
                 }
             }
          
         }
-          post {
-      always {
-        junit '**/testng-results.xml'
+        post {
+            always {
+            junit '**/testing-results.xml'
       }
    } 
 }
