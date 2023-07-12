@@ -9,11 +9,11 @@ TEST(SquareRootTest, PositiveNos) {
 }
 
 TEST(SomeRandomtest, NegativeNos) {
-    ASSERT_EQ(1, 1);
+    ASSERT_EQ(1, 0);
 }
 
 TEST(SomeRandomTest, PositiveNos) {
-    ASSERT_EQ(1, 1);
+    ASSERT_EQ(1, 3);
 }
 
 
