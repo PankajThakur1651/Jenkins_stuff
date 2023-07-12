@@ -43,10 +43,10 @@ pipeline
             }
          
         }
-            post {
-                always {
-                testNG(reportFilenamePattern: '**/testng-results.xml')
-            }
-        }
+        post {
+        always {
+        junit '**/reports/junit/*.xml'
+      }
+   }
 }
 
