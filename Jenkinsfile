@@ -43,10 +43,10 @@ pipeline
             }
          
         }
-        post {
-        always {
-        junit '**/reports/junit/*.xml'
+          post {
+      always {
+        junit '**/testng-results.xml'
       }
-   }
+   } 
 }
 
