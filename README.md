@@ -4,7 +4,7 @@ docker run -p 8080:8080 -p 50000:50000 --volume /home/$USER/jenkins/:/home/docke
 
 docker exec -it  -u root jenkins_machine /bin/bash
 
-install cmake, g++ and other required tool
+install cmake, g++ , gtest and other required tool
 
 docker start jenkins_machine
 docker stop jenkins_machine
