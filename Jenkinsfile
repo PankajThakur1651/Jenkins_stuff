@@ -43,6 +43,8 @@ pipeline
             }
          
         }
+        post {
+        always{
          xunit(
             testTimeMargin: '3000',
             thresholdMode: 1,
@@ -52,5 +54,7 @@ pipeline
             ],
             tools: [GoogleTest(deleteOutputFiles: true, failIfNotNew: true, pattern: '**/testing-results.xml', skipNoTestFiles: true,  stopProcessingIfError: true)]
         )
+        }
+    }
 }
 
