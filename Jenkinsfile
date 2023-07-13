@@ -45,6 +45,7 @@ pipeline
         }
         post {
         always{
+            echo "++++ Is it printed"
          xunit(
             testTimeMargin: '3000',
             thresholdMode: 1,
