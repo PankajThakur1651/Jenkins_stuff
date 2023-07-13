@@ -43,5 +43,14 @@ pipeline
             }
          
         }
+         xunit(
+            testTimeMargin: '3000',
+            thresholdMode: 1,
+            thresholds: [
+                failed (failureNewThreshold: '0', failureThreshold: '0', unstableNewThreshold: '0', unstableThreshold: '0'),
+                skipped(failureNewThreshold: '10', failureThreshold: '10', unstableNewThreshold: '10', unstableThreshold: '10')
+            ],
+            tools: [GoogleTest(deleteOutputFiles: true, failIfNotNew: true, pattern: '**/testing-results.xml', skipNoTestFiles: true,  stopProcessingIfError: true)]
+        )
 }
 
