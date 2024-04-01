@@ -1,4 +1,5 @@
 # Jenkins_stuff
+This pluggin will show the most frequent failing test on Jenkins 
 
 docker run -p 8080:8080 -p 50000:50000 --volume /home/$USER/jenkins/:/home/docker/jenkins/  --name jenkins_machine jenkins/jenkins:lts
 
