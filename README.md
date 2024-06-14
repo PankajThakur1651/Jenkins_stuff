@@ -8,8 +8,12 @@ This plugin will show the most frequent failing test on Jenkins
     http://localhost:8080/
 #### Go inside the container using below command
     docker exec -it  -u root jenkins_machine /bin/bash
-####
-    install cmake, g++ , gtest and other required tool
+#### install cmake, conan, g++, and other required tool on container 
+    apt-get update
+    apt-get upgrade
+    apt-get install cmake
+    apt-get install g++
+    
 #### stop container using below command
     docker stop jenkins_machine
 #### start container using below command
