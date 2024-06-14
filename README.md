@@ -1,14 +1,14 @@
-#### Jenkins_stuff
+#### jenkins_tutorial
 This plugin will show the most frequent failing test on Jenkins 
 #### install docker
     sudo apt  install docker.io
 #### launch Docker container
     docker run -p 8080:8080 -p 50000:50000 --volume /home/$USER/jenkins/:/home/docker/jenkins/  --name jenkins_machine jenkins/jenkins:lts
-#### Launch Jenkins in browser using below URL, initial password can be found when docker run command in used above
+#### Launch Jenkins in browser using below URL, initial password can be found when docker run command was used above
     http://localhost:8080/
 #### Go inside the container using below command
     docker exec -it  -u root jenkins_machine /bin/bash
-#### install cmake, conan, g++, and other required tool on container 
+#### install cmake, g++ and other tools if required in container 
     apt-get update
     apt-get upgrade
     apt-get install cmake

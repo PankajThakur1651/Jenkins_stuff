@@ -18,13 +18,13 @@ pipeline
                 steps
                 {
                     echo "PATH is: ${env.PATH}"
-                    sh "git clone https://github.com/panthaku/Jenkins_stuff.git"
+                    sh "git clone https://github.com/panthaku/jenkins_tutorial.git"
                 }
             }
             stage("Build")
             {
                 steps{
-                    dir("Jenkins_stuff/build"){
+                    dir("jenkins_tutorial/build"){
                         sh "rm -rf *"
                         sh "cmake .."
                         sh "make"
@@ -34,7 +34,7 @@ pipeline
             stage("Test")
             {
                 steps{
-                    dir("Jenkins_stuff/build"){
+                    dir("jenkins_tutorial/build"){
                         sh "./runTests --gtest_output=xml:testing-results.xml"
                         echo "print xml contents now "
                         sh "cat testing-results.xml"
