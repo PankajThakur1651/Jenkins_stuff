@@ -4,7 +4,7 @@ This plugin will show the most frequent failing test on Jenkins
     sudo apt  install docker.io
 #### launch Docker container
     docker run -p 8080:8080 -p 50000:50000 --volume /home/$USER/jenkins/:/home/docker/jenkins/  --name jenkins_machine jenkins/jenkins:lts
-#### Launch Jenkins in browser using below URL, initial password can be found when docker run command was used above
+#### Launch Jenkins in browser using below URL, Jenkins initial setup is required. A password for user admin  can be found when docker run command was used above
     http://localhost:8080/
 #### Go inside the container using below command
     docker exec -it  -u root jenkins_machine /bin/bash
@@ -35,3 +35,14 @@ http://localhost:8080/pipeline-syntax/globals
 #### Jenkins CLI
 _http://localhost:8080/cli/_
 
+#### To build using conan 
+https://github.com/PankajThakur1651/cpp_with_conan_and_cmake/tree/main
+
+
+## Types of Jenkins project
+#### Free Style: 
+    Simple Single task
+#### pipeline: 
+    Whole Delivery cycle, like build, test, deploy for a single branch
+#### Multibranch Pipeline
+    Whole Delivery cycle, like build, test, deploy for a multiple branch of same repository

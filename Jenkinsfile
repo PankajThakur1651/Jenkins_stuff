@@ -10,7 +10,6 @@ pipeline
             {
                 steps {
                     deleteDir()
-                    
                 }
             }
             stage("Clone Repo")
