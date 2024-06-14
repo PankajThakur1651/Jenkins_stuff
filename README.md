@@ -22,7 +22,9 @@ This plugin will show the most frequent failing test on Jenkins
     make -j8
     make install
     ldconfig
-    
+
+#### Install Test Result Analyzer plugin from the jenkins
+
 #### stop container using below command
     docker stop jenkins_machine
 #### start container using below command
