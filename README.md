@@ -13,6 +13,15 @@ This plugin will show the most frequent failing test on Jenkins
     apt-get upgrade
     apt-get install cmake
     apt-get install g++
+##### install gtest and gmock
+    cd ~
+    git clone https://github.com/google/googletest.git
+    cd googletest
+    mkdir build && cd build
+    cmake .. -DBUILD_SHARED_LIBS=ON -DINSTALL_GTEST=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr
+    make -j8
+    make install
+    ldconfig
     
 #### stop container using below command
     docker stop jenkins_machine
