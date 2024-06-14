@@ -18,7 +18,7 @@ pipeline
                 steps
                 {
                     echo "PATH is: ${env.PATH}"
-                    sh "git clone https://github.com/panthaku/jenkins_tutorial.git"
+                    sh "git clone https://github.com/PankajThakur1651/jenkins_tutorial.git"
                 }
             }
             stage("Build")
